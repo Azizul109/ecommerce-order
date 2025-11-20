@@ -66,3 +66,14 @@ A scalable REST API for an order management system with inventory tracking built
 -   php artisan serve
 -   MySQL/PostgreSQL
 -   Redis (php artsan queue:work)
+-   Import json postman api collection to test api
+-   testing command is 'php artisan test'
+
+### API authentication
+
+-   go to cmd and generate jwt token
+-   command is 'php artisan jwt:secret'
+-   copy the token and paste it on postman Authorization
+-   Choose bearer token and paste the token
+-   After register of user 'access token' will be given from postman
+-   Use the 'access token' to test other api
