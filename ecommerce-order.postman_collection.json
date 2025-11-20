@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "bb8c46a3-b26f-44cd-9afd-b29e108a0dcf",
+		"name": "ecommerce-order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18352187"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "7m9sZtLNJAWMQ4lxk9VYCu8do2R5uabZMCD2Vit4i5Ubb6rWctnAIkwBNq9aqaBY"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"name\": \"Vendor One\",\n    \"email\": \"vendor@example.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\",\n    \"role\": \"vendor\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Me",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjU5MzE1LCJleHAiOjE3NjM2NjI5MTUsIm5iZiI6MTc2MzY1OTMxNSwianRpIjoiakdXcEdzajQ1M2ZGM1ViZSIsInN1YiI6IjgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.6aImjUR3FRrKuwIeftLXmNdV5JCaxSBrMTdEPfz5pvE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/me"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjU5MzE1LCJleHAiOjE3NjM2NjI5MTUsIm5iZiI6MTc2MzY1OTMxNSwianRpIjoiakdXcEdzajQ1M2ZGM1ViZSIsInN1YiI6IjgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.6aImjUR3FRrKuwIeftLXmNdV5JCaxSBrMTdEPfz5pvE"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Product List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjU5MzE1LCJleHAiOjE3NjM2NjI5MTUsIm5iZiI6MTc2MzY1OTMxNSwianRpIjoiakdXcEdzajQ1M2ZGM1ViZSIsInN1YiI6IjgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.6aImjUR3FRrKuwIeftLXmNdV5JCaxSBrMTdEPfz5pvE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Single",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjU5MzE1LCJleHAiOjE3NjM2NjI5MTUsIm5iZiI6MTc2MzY1OTMxNSwianRpIjoiakdXcEdzajQ1M2ZGM1ViZSIsInN1YiI6IjgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.6aImjUR3FRrKuwIeftLXmNdV5JCaxSBrMTdEPfz5pvE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjU5MzE1LCJleHAiOjE3NjM2NjI5MTUsIm5iZiI6MTc2MzY1OTMxNSwianRpIjoiakdXcEdzajQ1M2ZGM1ViZSIsInN1YiI6IjgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.6aImjUR3FRrKuwIeftLXmNdV5JCaxSBrMTdEPfz5pvE"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category_id\": 1,\n    \"name\": \"iPhone 15 Pro Max\",\n    \"description\": \"Latest iPhone with advanced features - Updated\",\n    \"price\": 1099.99,\n    \"stock_quantity\": 45,\n    \"low_stock_threshold\": 5,\n    \"is_active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjU5MzE1LCJleHAiOjE3NjM2NjI5MTUsIm5iZiI6MTc2MzY1OTMxNSwianRpIjoiakdXcEdzajQ1M2ZGM1ViZSIsInN1YiI6IjgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.6aImjUR3FRrKuwIeftLXmNdV5JCaxSBrMTdEPfz5pvE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category_id\": 1,\n    \"name\": \"iPhone 15 Pro Max\",\n    \"description\": \"Latest iPhone with advanced features - Updated\",\n    \"price\": 1099.99,\n    \"stock_quantity\": 45,\n    \"low_stock_threshold\": 5,\n    \"is_active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/products/search?q=iPhone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "iPhone"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Stock Alert",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjU5MzE1LCJleHAiOjE3NjM2NjI5MTUsIm5iZiI6MTc2MzY1OTMxNSwianRpIjoiakdXcEdzajQ1M2ZGM1ViZSIsInN1YiI6IjgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.6aImjUR3FRrKuwIeftLXmNdV5JCaxSBrMTdEPfz5pvE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category_id\": 1,\n    \"name\": \"iPhone 15 Pro Max\",\n    \"description\": \"Latest iPhone with advanced features - Updated\",\n    \"price\": 1099.99,\n    \"stock_quantity\": 45,\n    \"low_stock_threshold\": 5,\n    \"is_active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/products/low-stock/alerts"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjU5MzE1LCJleHAiOjE3NjM2NjI5MTUsIm5iZiI6MTc2MzY1OTMxNSwianRpIjoiakdXcEdzajQ1M2ZGM1ViZSIsInN1YiI6IjgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.6aImjUR3FRrKuwIeftLXmNdV5JCaxSBrMTdEPfz5pvE"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category_id\": 1,\n    \"name\": \"iPhone 15 Pro Max\",\n    \"description\": \"Latest iPhone with advanced features - Updated\",\n    \"price\": 1099.99,\n    \"stock_quantity\": 45,\n    \"low_stock_threshold\": 5,\n    \"is_active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/products/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Order Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjYwMDM3LCJleHAiOjE3NjM2NjM2MzcsIm5iZiI6MTc2MzY2MDAzNywianRpIjoiSkFZRnZmM3h3OGZCalByTCIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ejE2-dHUMY6dvEhqzPxbyimGBv7UjVzHU1eIJL9Tsew"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"shipping_address\": {\n        \"street\": \"456 Oak Avenue\",\n        \"city\": \"Los Angeles\",\n        \"state\": \"CA\",\n        \"zip_code\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"billing_address\": {\n        \"street\": \"456 Oak Avenue\",\n        \"city\": \"Los Angeles\",\n        \"state\": \"CA\",\n        \"zip_code\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"customer_email\": \"john@example.com\",\n    \"items\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "Order List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjYwMDM3LCJleHAiOjE3NjM2NjM2MzcsIm5iZiI6MTc2MzY2MDAzNywianRpIjoiSkFZRnZmM3h3OGZCalByTCIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ejE2-dHUMY6dvEhqzPxbyimGBv7UjVzHU1eIJL9Tsew"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"shipping_address\": {\n        \"street\": \"456 Oak Avenue\",\n        \"city\": \"Los Angeles\",\n        \"state\": \"CA\",\n        \"zip_code\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"billing_address\": {\n        \"street\": \"456 Oak Avenue\",\n        \"city\": \"Los Angeles\",\n        \"state\": \"CA\",\n        \"zip_code\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"customer_email\": \"john@example.com\",\n    \"items\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "Order Single",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjYwMDM3LCJleHAiOjE3NjM2NjM2MzcsIm5iZiI6MTc2MzY2MDAzNywianRpIjoiSkFZRnZmM3h3OGZCalByTCIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ejE2-dHUMY6dvEhqzPxbyimGBv7UjVzHU1eIJL9Tsew"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"shipping_address\": {\n        \"street\": \"456 Oak Avenue\",\n        \"city\": \"Los Angeles\",\n        \"state\": \"CA\",\n        \"zip_code\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"billing_address\": {\n        \"street\": \"456 Oak Avenue\",\n        \"city\": \"Los Angeles\",\n        \"state\": \"CA\",\n        \"zip_code\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"customer_email\": \"john@example.com\",\n    \"items\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/orders/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Order Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjYwMDM3LCJleHAiOjE3NjM2NjM2MzcsIm5iZiI6MTc2MzY2MDAzNywianRpIjoiSkFZRnZmM3h3OGZCalByTCIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ejE2-dHUMY6dvEhqzPxbyimGBv7UjVzHU1eIJL9Tsew"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"shipping_address\": {\n        \"street\": \"456 Oak Avenue\",\n        \"city\": \"Los Angeles\",\n        \"state\": \"CA\",\n        \"zip_code\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"billing_address\": {\n        \"street\": \"456 Oak Avenue\",\n        \"city\": \"Los Angeles\",\n        \"state\": \"CA\",\n        \"zip_code\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"customer_email\": \"john@example.com\",\n    \"items\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/orders/1/status"
+			},
+			"response": []
+		},
+		{
+			"name": "Order Cancel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzYzNjYwMDM3LCJleHAiOjE3NjM2NjM2MzcsIm5iZiI6MTc2MzY2MDAzNywianRpIjoiSkFZRnZmM3h3OGZCalByTCIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ejE2-dHUMY6dvEhqzPxbyimGBv7UjVzHU1eIJL9Tsew"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"shipping_address\": {\n        \"street\": \"456 Oak Avenue\",\n        \"city\": \"Los Angeles\",\n        \"state\": \"CA\",\n        \"zip_code\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"billing_address\": {\n        \"street\": \"456 Oak Avenue\",\n        \"city\": \"Los Angeles\",\n        \"state\": \"CA\",\n        \"zip_code\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"customer_email\": \"john@example.com\",\n    \"items\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/v1/orders/1/cancel"
+			},
+			"response": []
+		}
+	]
+}

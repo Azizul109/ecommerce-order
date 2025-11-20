@@ -77,3 +77,8 @@ A scalable REST API for an order management system with inventory tracking built
 -   Choose bearer token and paste the token
 -   After register of user 'access token' will be given from postman
 -   Use the 'access token' to test other api
+
+### Postman Collection
+
+-   postman collection api is also provided
+-   Just import it the check the result
